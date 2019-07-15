@@ -1,0 +1,81 @@
+{
+"stores": [
+    { 
+        "id": 1, 
+        "name": "East Nashville" 
+    },
+    { 
+        "id": 2, 
+        "name": "Donelson" 
+    },
+    { 
+        "id": 3, 
+        "name": "The Nations" 
+    },
+    { 
+        "id": 4, 
+        "name": "Belle Meade" 
+    }
+],
+
+"employees": [
+    { 
+        "id": 1, 
+        "name": "Jessica Younker" 
+    },
+    { 
+        "id": 2, 
+        "name": "Jordan Nelson" 
+    },
+    { 
+        "id": 3, 
+        "name": "Zoe LeBlanc" 
+    },
+    { 
+        "id": 4, 
+        "name": "Blaise Roberts" 
+    }
+],
+
+"types": [
+    { 
+        "id": 1, 
+        "name": "bar" 
+    },
+    { 
+        "id": 2, 
+        "name": "gummy" 
+    },
+    { 
+        "id": 3, 
+        "name": "sucker" 
+    },
+    { 
+        "id": 4, 
+        "name": "bite size" 
+    }
+],
+
+"candies": [
+    { 
+       "id": 1, 
+        "name": "tootsie rolls", 
+        "typeId": 4 
+    },
+    { 
+       "id": 2, 
+        "name": "kitkat", 
+        "typeId": 1 
+    },
+    { 
+       "id": 3, 
+        "name": "dum dums", 
+        "typeId": 3 
+    },
+    { 
+       "id": 4, 
+        "name": "sour patch kids", 
+        "typeId": 2 
+    }
+]
+}

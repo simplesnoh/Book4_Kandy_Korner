@@ -1,62 +1,56 @@
 import React, { Component } from "react"
-import EmployeeList from "./employees/EmployeeList"
-import StoreList from "./stores/StoreList"
-import CandyList from "./candy/CandyList"
-import "../index"
+import NavBar from "./nav/NavBar"
+import ApplicationViews from "./ApplicationViews"
+
+import "./KandyKorner.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 
 class KandyKorner extends Component {
-
-
-    locationsFromAPI = [
-        { id: 1, name: "East Nashville" },
-        { id: 2, name: "Donelson" },
-        { id: 3, name: "The Nations" },
-        { id: 4, name: "Belle Meade" }
-    ]
-    
-    employeesFromAPI = [
-        { id: 1, name: "Jessica Younker" },
-        { id: 2, name: "Jordan Nelson" },
-        { id: 3, name: "Zoe LeBlanc" },
-        { id: 4, name: "Blaise Roberts" }
-    ]
-
-    candyTypesFromAPI = [
-        { id: 1, name: "bar" },
-        { id: 2, name: "gummy" },
-        { id: 3, name: "sucker" },
-        { id: 4, name: "bite size" }
-    ]
-
-    individualCandiesFromAPI = [
-        { id: 1, name: "tootsie rolls", typeId: 4 },
-        { id: 2, name: "kitkat", typeId: 1 },
-        { id: 3, name: "dum dums", typeId: 3 },
-        { id: 4, name: "sour patch kids", typeId: 2 }
-    ]
-
-
-    state = {
-        stores: this.locationsFromAPI,
-        employees: this.employeesFromAPI,
-        candyTypes: this.candyTypesFromAPI ,
-        candies: this.individualCandiesFromAPI
-    }
-
     render() {
         return (
-            <article className="KandyKorner">
-                <StoreList stores={this.state.stores} />
-                <EmployeeList employees={this.state.employees} />
-                <CandyList candies={this.state.candies} />}
-            </article>
+            <React.Fragment>
+                <NavBar />
+                <ApplicationViews />
+            </React.Fragment>
         )
     }
 }
 
+export default KandyKorner
 
-    
 
 
-    export default KandyKorner
+// Chpt 4 Practice
+
+// You are going to be building your own React application based off of what you do with these lesson plans for NSS Kennels.
+
+// Create another React project in ~/workspace/javascript/exercises/kandykorner and cd into it.
+// Initialize your app with npx create-react-app .
+// Create a src/components directory.
+// Create your application file and component in components/KandyKorner.js.
+// Update index.js to render the <KandyKorner /> component, just like you did in Kennels.
+// There are 4 collections of data you will be using for the Kandy Korner application.
+
+// Store locations
+// Employees
+// Candy types
+// Individual candies
+// Define 4 arrays, filled with objects representing the above items, in your KandyKorner component. Add those arrays to the state of your application.
+
+// Make sure that each individual candy object has a foreign key to a candy type.
+
+// state = {
+//     stores: storeArray,
+//     employees: employeeArray,
+//     candyTypes: candyTypeArray,
+//     candies: candyArray
+// }
+// Then create the following components to display the data.
+
+// <StoreList />
+// <EmployeeList />
+// <CandyList />
+// And use them in the render() method of KandyKorner. Make sure you pass the appropriate state to each of the components.
+
+// Lastly, access the data on this.props object in each component to display the data.
